@@ -1,0 +1,13 @@
+version: '2'
+
+services:
+  web-app:
+    build: .
+    volumes:
+      - .:/app_frontend
+      - /app_frontend/node_modules
+    ports:
+      - '3000:3000'
+    stdin_open: true
+    tty: true 
+      
